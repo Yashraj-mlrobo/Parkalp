@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>AMITECH-PRAKALP | Innovation Showcase</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container": "var(--surface-container)",
+                        "on-secondary-container": "var(--on-secondary-container)",
+                        "secondary": "var(--secondary)",
+                        "on-tertiary-fixed": "var(--on-tertiary-fixed)",
+                        "on-secondary": "var(--on-secondary)",
+                        "tertiary-dim": "var(--tertiary-dim)",
+                        "on-tertiary-fixed-variant": "var(--on-tertiary-fixed-variant)",
+                        "tertiary": "var(--tertiary)",
+                        "on-tertiary": "var(--on-tertiary)",
+                        "on-primary-container": "var(--on-primary-container)",
+                        "secondary-dim": "var(--secondary-dim)",
+                        "on-secondary-fixed-variant": "var(--on-secondary-fixed-variant)",
+                        "tertiary-container": "var(--tertiary-container)",
+                        "surface-container-low": "var(--surface-container-low)",
+                        "error-dim": "var(--error-dim)",
+                        "tertiary-fixed-dim": "var(--tertiary-fixed-dim)",
+                        "surface-bright": "var(--surface-bright)",
+                        "inverse-primary": "var(--inverse-primary)",
+                        "secondary-fixed": "var(--secondary-fixed)",
+                        "primary": "var(--primary)",
+                        "primary-fixed-dim": "var(--primary-fixed-dim)",
+                        "on-surface": "var(--on-surface)",
+                        "surface-container-high": "var(--surface-container-high)",
+                        "error": "var(--error)",
+                        "outline": "var(--outline)",
+                        "tertiary-fixed": "var(--tertiary-fixed)",
+                        "secondary-fixed-dim": "var(--secondary-fixed-dim)",
+                        "on-background": "var(--on-background)",
+                        "surface-dim": "var(--surface-dim)",
+                        "on-error": "var(--on-error)",
+                        "secondary-container": "var(--secondary-container)",
+                        "on-error-container": "var(--on-error-container)",
+                        "surface-container-highest": "var(--surface-container-highest)",
+                        "error-container": "var(--error-container)",
+                        "inverse-surface": "var(--inverse-surface)",
+                        "surface-tint": "var(--surface-tint)",
+                        "on-primary": "var(--on-primary)",
+                        "inverse-on-surface": "var(--inverse-on-surface)",
+                        "on-primary-fixed-variant": "var(--on-primary-fixed-variant)",
+                        "primary-dim": "var(--primary-dim)",
+                        "surface": "var(--surface)",
+                        "surface-variant": "var(--surface-variant)",
+                        "outline-variant": "var(--outline-variant)",
+                        "primary-container": "var(--primary-container)",
+                        "primary-fixed": "var(--primary-fixed)",
+                        "on-primary-fixed": "var(--on-primary-fixed)",
+                        "on-secondary-fixed": "var(--on-secondary-fixed)",
+                        "on-tertiary-container": "var(--on-tertiary-container)",
+                        "on-surface-variant": "var(--on-surface-variant)",
+                        "background": "var(--background)"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--on-background);
+            font-family: 'Manrope', sans-serif;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        .glass-panel {
+            background: rgba(26, 11, 54, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+
+<body class="selection:bg-primary selection:text-on-primary overflow-x-hidden">
+
+    <!-- Custom Cursor -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-line"></div>
+    <div id="cursor-robot">
+        <div class="robot-core"></div>
+        <div class="robot-ring"></div>
+    </div>
+
+    <!-- Header / TopAppBar -->
+    <header
+        class="docked full-width top-0 sticky z-50 backdrop-blur-lg border-b border-outline-variant/10 shadow-none bg-surface-container-low/40">
+        <div class="flex justify-between items-center w-full px-4 md:px-8 py-3 md:py-4 max-w-screen-2xl mx-auto">
+            <div class="flex items-center gap-3 md:gap-6">
+                <img src="logo_university1.png" alt="Amity University"
+                    class="h-10 md:h-16 lg:h-20 w-auto object-contain">
+                <div class="h-8 md:h-12 lg:h-16 w-px bg-outline-variant/50"></div>
+                <img src="logo_prakalp1.png" alt="Prakalp" class="h-20 md:h-32 lg:h-20 w-auto object-contain">
+                <div
+                    class="text-xl sm:text-2xl md:text-3xl font-bold tracking-tighter text-primary font-['Space_Grotesk'] leading-[1.1]">
+                    AMITECH<br class="block sm:hidden md:block lg:hidden xl:hidden">PRAKALP
+                </div>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-12">
+                <a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-[#c180ff] font-bold border-b-2 border-[#c180ff] pb-1 transition-all duration-300"
+                    href="#">Home</a>
+                <a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-[#eae1ff] hover:text-[#a3a6ff] transition-colors transition-all duration-300"
+                    href="#domains">Domain</a>
+                <a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-[#eae1ff] hover:text-[#a3a6ff] transition-colors transition-all duration-300"
+                    href="#contact">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-2 md:gap-4">
+                <button id="theme-toggle"
+                    class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface bg-surface-container hover:bg-surface-container-highest transition-colors shadow-sm active:scale-95 border border-outline-variant/20">
+                    <span class="material-symbols-outlined text-[1.25rem] toggle-icon">dark_mode</span>
+                </button>
+                <a href="https://forms.gle/UQfnDZQ6dpMkbsQ99" target="_blank"
+                    class="bg-primary text-on-primary px-4 md:px-6 py-2 rounded-md font-['Space_Grotesk'] font-bold text-xs md:text-sm uppercase tracking-widest scale-95 active:scale-90 transition-all duration-300 hover:bg-primary-dim shadow-[0_0_20px_rgba(163,166,255,0.3)] inline-block">
+                    Register
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-[921px] flex flex-col justify-center items-center px-6 pt-20 overflow-hidden">
+            <!-- Background Decorative Elements -->
+            <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none overflow-hidden -z-10">
+                <div
+                    class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-secondary opacity-10 blur-[150px] rounded-full">
+                </div>
+                <div
+                    class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-primary opacity-10 blur-[150px] rounded-full">
+                </div>
+            </div>
+
+            <div class="max-w-screen-2xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-10 reveal-on-scroll">
+                    <div
+                        class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-surface-container-highest border border-outline-variant/20">
+                        <span class="w-2 h-2 rounded-full bg-tertiary shadow-[0_0_8px_#c6fff3]"></span>
+                        <span class="text-xs font-['Space_Grotesk'] uppercase tracking-tighter text-tertiary">Amity
+                            University Mumbai Presents</span>
+                    </div>
+
+                    <h1
+                        class="font-['Space_Grotesk'] text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-[0.9] text-on-surface">
+                        AMITECH<br>
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">PRAKALP</span>
+                    </h1>
+
+                    <p class="max-w-xl text-lg text-on-surface-variant leading-relaxed">
+                        The definitive arena for visionaries and technical minds. Showcase your groundbreaking projects
+                        in an ecosystem designed for high-end innovation and academic excellence.
+                    </p>
+
+                    <!-- Details Ledger -->
+                    <div
+                        class="flex flex-wrap gap-y-6 gap-x-8 md:gap-x-16 py-8 border-t border-b border-outline-variant/10">
+                        <div>
+                            <div
+                                class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-tertiary font-bold mb-1">
+                                Event Date</div>
+                            <div class="font-['Space_Grotesk'] text-2xl font-medium text-on-surface">17th April 2026
+                            </div>
+                        </div>
+                        <div>
+                            <div
+                                class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-tertiary font-bold mb-1">
+                                Grand Prize Pool</div>
+                            <div class="font-['Space_Grotesk'] text-2xl font-medium text-on-surface">₹45,000</div>
+                        </div>
+                        <div>
+                            <div
+                                class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-tertiary font-bold mb-1">
+                                Venue</div>
+                            <div class="font-['Space_Grotesk'] text-2xl font-medium text-on-surface">Amity Mumbai</div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Buttons Fixed -->
+                    <div class="flex flex-col sm:flex-row gap-6">
+                        <a href="https://forms.gle/UQfnDZQ6dpMkbsQ99" target="_blank"
+                            class="bg-primary text-on-primary px-10 py-4 rounded-md font-['Space_Grotesk'] font-bold text-lg uppercase tracking-wider transition-all hover:bg-primary-dim hover:scale-105 shadow-lg shadow-primary/20 inline-flex items-center justify-center">
+                            Register now
+                        </a>
+                        <a href="#domains"
+                            class="px-10 py-4 rounded-md font-['Space_Grotesk'] font-bold text-lg uppercase tracking-wider text-primary border border-outline-variant/20 hover:bg-surface-container-highest transition-all inline-flex items-center justify-center">
+                            Explore Domains
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 relative reveal-on-scroll" style="transition-delay: 200ms;">
+                    <div
+                        class="relative w-full aspect-square bg-surface-container rounded-2xl overflow-hidden shadow-2xl">
+                        <img alt="high-tech laboratory environment"
+                            class="w-full h-full object-cover opacity-60 mix-blend-screen"
+                            data-alt="futuristic dark blue laboratory with glowing holographic data visualizations and neon light accents on glass panels"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvun6S-tcSBBRxxJyrgw4UitNMrd-GYMULxn-l9QCXzNT2AbMQbMePRTApiuBr8Zbj1QVIFaVUtFJ5qkkp9HYgRQPlLANmXMWDxpZonGeY9RhD_tlKKe_gJr7L46n6WbSIAAoKA5EXES2nhJd3YrBcAx9VgSC7UY8k0kdsxh1A43533gemJNchRg5lkTbrxsoRzUjl5QqbUQTSMmWoX0lX9nMzvfU_e5Q_Epj-UMse7RNlaOUsCG31xMannqzG_t8AqNQrtc3wV0A">
+                        <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent">
+                        </div>
+                    </div>
+
+                    <!-- Asymmetric floating label -->
+                    <div
+                        class="absolute -bottom-6 -left-6 bg-surface-container-highest p-6 rounded-xl border border-outline-variant/30 shadow-2xl backdrop-blur-md">
+                        <div class="flex items-center gap-4">
+                            <div class="p-3 rounded-lg bg-secondary/20">
+                                <span class="material-symbols-outlined text-secondary"
+                                    style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+                            </div>
+                            <div>
+                                <div class="text-sm font-bold text-on-surface">200+ Projects</div>
+                                <div class="text-xs text-on-surface-variant">Global Participation</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Domain Bento Grid -->
+        <section id="domains" class="py-32 px-8 bg-surface-container-low overflow-hidden">
+            <div class="max-w-screen-2xl mx-auto">
+                <div class="mb-20 space-y-4 reveal-on-scroll">
+                    <h2 class="font-['Space_Grotesk'] text-5xl font-bold tracking-tight text-on-surface">Competition
+                        Domains</h2>
+                    <p class="text-on-surface-variant max-w-2xl text-lg">We break the silos. Bring your innovation from
+                        any domain—from core engineering to interdisciplinary research.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-6 h-auto md:h-[600px]">
+                    <!-- Software -->
+                    <div class="md:col-span-2 lg:col-span-5 group relative bg-surface-container rounded-xl overflow-hidden p-8 flex flex-col justify-end transition-all hover:scale-[1.02] duration-300 reveal-on-scroll"
+                        style="transition-delay: 100ms;">
+                        <div class="absolute inset-0 opacity-20 transition-opacity group-hover:opacity-40">
+                            <img alt="software development code" class="w-full h-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPtpQMwltmXZACuumUkM6mR1wbwGhAOrBcb5W-Eq2IntE8TUTv9aY_znyBIp97RIYjs909YlNUkBihHyLVv1hwlpZriJ943FjqiDXM5uRnCxPLlVV96wmB4vN-PS7YYPoti9V-aNZBH2I71vxdXItqkv_luJstBZZ44QVN8USa76oJ5oHR7m5vQSFmCAKRvgjm1cg8V9ozXYxBsy97bApzP1ArgkWWBRotAzjqaLVsUSU1G_QODBGtosf6XHAGSF6vw10X43nD4WM">
+                        </div>
+                        <div class="relative z-10 space-y-4">
+                            <span class="material-symbols-outlined text-4xl text-primary"
+                                style="font-variation-settings: 'FILL' 0;">terminal</span>
+                            <h3 class="font-['Space_Grotesk'] text-3xl font-bold text-on-surface">Software Solutions
+                            </h3>
+                            <p class="text-on-surface-variant">AI agents, Web3 protocols, cloud architectures, and
+                                disruptive applications.</p>
+                        </div>
+                    </div>
+
+                    <!-- Hardware -->
+                    <div class="md:col-span-2 lg:col-span-7 group relative bg-surface-container rounded-xl overflow-hidden p-8 flex flex-col justify-end transition-all hover:scale-[1.02] duration-300 reveal-on-scroll"
+                        style="transition-delay: 200ms;">
+                        <div class="absolute inset-0 opacity-20 transition-opacity group-hover:opacity-40">
+                            <img alt="electronic circuitry" class="w-full h-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUVDZZSdI1eleuaAanFtVqDRNmcvAg4N3Fd79W4TEnsljGUgWUtBddMO10l_eG_VlB_CXz3-jT06i3iy4Zv1DVdGhdaWX7oAFarSpwGmiPCt5VH5EwFyRUt8nUe_M7CVLNfqnRQm9tGa11LoKtKUpLqtFZfPXC5rgUWgh9-MS_bRoT9e0QQBSj05B3dtyeoSd0VfEd5jajvNv7x_iQrCwyKWxOEJhGrMIyRUmBwKEs9N2i1a-o_J0cXIQX5AJYNarKfzJIgY-O2H0">
+                        </div>
+                        <div class="relative z-10 space-y-4">
+                            <span class="material-symbols-outlined text-4xl text-secondary"
+                                style="font-variation-settings: 'FILL' 0;">memory</span>
+                            <h3 class="font-['Space_Grotesk'] text-3xl font-bold text-on-surface">Hardware & Robotics
+                            </h3>
+                            <p class="text-on-surface-variant max-w-md">Embedded systems, IoT ecosystems, robotic
+                                automation, and physical prototypes that bridge the gap.</p>
+                        </div>
+                    </div>
+
+                    <!-- Simulation -->
+                    <div class="md:col-span-2 lg:col-span-7 group relative bg-surface-container rounded-xl overflow-hidden p-8 flex flex-col justify-end transition-all hover:scale-[1.02] duration-300 reveal-on-scroll"
+                        style="transition-delay: 300ms;">
+                        <div class="absolute inset-0 opacity-20 transition-opacity group-hover:opacity-40">
+                            <img alt="simulation data" class="w-full h-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuALgvbovKimqjBsnk9gE78ZpNjog6Va4eLymZAJGpLbSXODMU6jmEeGSvd1m907JxLZ02wJFfcemY3UucXNQkPvZb8_TVlmVE0O5n0TdrbP_xdlcHqa6_uYm5tkE7D_iC7hkYmy1GcpnlcLtcdVLY44KSO83lnpXq__fP0h8Bv2jzOHiVRMrGiJrbrOU5qq_xTdRx-BlYP_xH1_L-YuGgnZUNHYIz_-xmaDhO6dtwD8CvgpqswblENjgYwAMvR3G-w7aLFUkFVivTI">
+                        </div>
+                        <div class="relative z-10 space-y-4">
+                            <span class="material-symbols-outlined text-4xl text-tertiary"
+                                style="font-variation-settings: 'FILL' 0;">analytics</span>
+                            <h3 class="font-['Space_Grotesk'] text-3xl font-bold text-on-surface">Simulations</h3>
+                            <p class="text-on-surface-variant max-w-md">FEA analysis, network simulations, VR/AR
+                                experiences, and digital twin models.</p>
+                        </div>
+                    </div>
+
+                    <!-- Research Paper -->
+                    <div class="md:col-span-2 lg:col-span-5 group relative bg-surface-container-highest rounded-xl overflow-hidden p-8 flex flex-col justify-end transition-all hover:scale-[1.02] duration-300 reveal-on-scroll"
+                        style="transition-delay: 400ms;">
+                        <div class="absolute top-8 right-8">
+                            <div
+                                class="bg-primary text-on-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter shadow-glow-primary">
+                                Academic Track</div>
+                        </div>
+                        <div class="relative z-10 space-y-4">
+                            <span class="material-symbols-outlined text-4xl text-primary"
+                                style="font-variation-settings: 'FILL' 0;">description</span>
+                            <h3 class="font-['Space_Grotesk'] text-3xl font-bold text-on-surface">Research Papers</h3>
+                            <p class="text-on-surface-variant">Technical & Non-Technical publications, theoretical
+                                breakthroughs, and comparative studies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section / Prize Callout -->
+        <section class="py-24 px-8 relative overflow-hidden">
+            <div
+                class="max-w-4xl mx-auto glass-panel p-12 md:p-20 rounded-[2rem] border border-outline-variant/10 text-center space-y-12 reveal-on-scroll">
+                <div class="space-y-4">
+                    <span
+                        class="text-tertiary font-['Space_Grotesk'] uppercase tracking-[0.4em] font-bold text-xs">Total
+                        Grant</span>
+                    <h2 class="font-['Space_Grotesk'] text-6xl md:text-8xl font-bold text-on-surface">₹45,000<span
+                            class="text-tertiary">*</span></h2>
+                    <p class="text-on-surface-variant text-xl">The prize pool is just the beginning. Get mentored by
+                        industry experts and connect with incubation centers.</p>
+                </div>
+
+
+
+                <a href="https://forms.gle/UQfnDZQ6dpMkbsQ99" target="_blank"
+                    class="w-full sm:w-auto bg-primary text-on-primary px-12 py-6 rounded-md font-['Space_Grotesk'] font-bold text-xl uppercase tracking-widest transition-all hover:scale-105 active:scale-95 shadow-2xl shadow-primary/30 inline-block">
+                    Register Now
+                </a>
+            </div>
+        </section>
+
+        <!-- Location & Contact -->
+        <section id="contact" class="py-24 px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-screen-2xl mx-auto">
+            <div class="space-y-12 reveal-on-scroll">
+                <div>
+                    <h2 class="font-['Space_Grotesk'] text-5xl font-bold tracking-tight text-on-surface mb-6">Connect
+                        With Us</h2>
+                    <p class="text-on-surface-variant text-lg">Have questions about the tracks or registration process?
+                        Our technical team is ready to assist.</p>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="flex items-start gap-6 group">
+                        <div class="p-4 rounded-xl bg-surface-container group-hover:bg-primary/10 transition-colors">
+                            <span class="material-symbols-outlined text-primary">location_on</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-on-surface mb-1">Event Venue</h4>
+                            <p class="text-on-surface-variant">Amity University Mumbai, Mumbai-Pune Expressway, Bhatan,
+                                Panvel.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-6 group">
+                        <div class="p-4 rounded-xl bg-surface-container group-hover:bg-primary/10 transition-colors">
+                            <span class="material-symbols-outlined text-primary">mail</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-on-surface mb-1">Email Queries</h4>
+                            <a href="mailto:amittechprakalpexpo@gmail.com"
+                                class="text-on-surface-variant hover:text-[#c6fff3] transition-colors">amittechprakalpexpo@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rounded-2xl overflow-hidden border border-outline-variant/10 shadow-2xl h-[400px] hover:scale-[1.02] transition-transform duration-300 reveal-on-scroll"
+                style="transition-delay: 200ms;">
+                <a href="https://maps.app.goo.gl/bkz7316TkPwSEndv6" class="block w-full h-full">
+                    <img alt="map of university location"
+                        class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300"
+                        src="map_university.png">
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="full-width rounded-t-none bg-[#160b36]">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full space-y-8 md:space-y-0 max-w-screen-2xl mx-auto">
+            <div class="flex flex-col space-y-4 items-center md:items-start">
+                <div class="font-['Space_Grotesk'] font-bold text-2xl text-[#c6fff3]">AMITECH-PRAKALP</div>
+                <p class="text-[#7a6f9b] font-['Manrope'] text-sm leading-relaxed max-w-xs text-center md:text-left">
+                    The annual flagship project competition fostering technical brilliance at Amity University Mumbai.
+                </p>
+            </div>
+
+            <div class="flex gap-12">
+                <div class="space-y-4 text-center md:text-left">
+                    <h5 class="text-[#c180ff] font-['Space_Grotesk'] uppercase text-xs tracking-widest font-bold">
+                        Contact</h5>
+                    <ul class="space-y-2 text-sm text-[#7a6f9b] font-['Manrope'] inline-block text-left">
+                        <li>
+                            <a href="tel:+917828887985"
+                                class="flex items-center gap-2 hover:text-[#c6fff3] transition-colors">
+                                <span class="material-symbols-outlined text-sm">phone</span>
+                                7828887985
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+919619029115"
+                                class="flex items-center gap-2 hover:text-[#c6fff3] transition-colors">
+                                <span class="material-symbols-outlined text-sm">phone</span>
+                                9619029115
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col items-center md:items-end space-y-4">
+                    <div class="flex gap-4">
+                        <div
+                            class="w-12 h-12 bg-[#1c113f] rounded-lg flex items-center justify-center border border-outline-variant/10">
+                            <span class="material-symbols-outlined text-[#a3a6ff]">school</span>
+                        </div>
+                        <div
+                            class="w-12 h-12 bg-[#1c113f] rounded-lg flex items-center justify-center border border-outline-variant/10">
+                            <span class="material-symbols-outlined text-[#c6fff3]">emoji_events</span>
+                        </div>
+                    </div>
+                    <div class="text-[#7a6f9b] text-xs font-['Manrope']">© 2026 AMITECH-PRAKALP | Amity University
+                        Mumbai</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
