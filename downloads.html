@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Downloads | AMITECH-PRAKALP</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container": "var(--surface-container)",
+                        "on-secondary-container": "var(--on-secondary-container)",
+                        "secondary": "var(--secondary)",
+                        "on-tertiary-fixed": "var(--on-tertiary-fixed)",
+                        "on-secondary": "var(--on-secondary)",
+                        "tertiary-dim": "var(--tertiary-dim)",
+                        "on-tertiary-fixed-variant": "var(--on-tertiary-fixed-variant)",
+                        "tertiary": "var(--tertiary)",
+                        "on-tertiary": "var(--on-tertiary)",
+                        "on-primary-container": "var(--on-primary-container)",
+                        "secondary-dim": "var(--secondary-dim)",
+                        "on-secondary-fixed-variant": "var(--on-secondary-fixed-variant)",
+                        "tertiary-container": "var(--tertiary-container)",
+                        "surface-container-low": "var(--surface-container-low)",
+                        "error-dim": "var(--error-dim)",
+                        "tertiary-fixed-dim": "var(--tertiary-fixed-dim)",
+                        "surface-bright": "var(--surface-bright)",
+                        "inverse-primary": "var(--inverse-primary)",
+                        "secondary-fixed": "var(--secondary-fixed)",
+                        "primary": "var(--primary)",
+                        "primary-fixed-dim": "var(--primary-fixed-dim)",
+                        "on-surface": "var(--on-surface)",
+                        "surface-container-high": "var(--surface-container-high)",
+                        "error": "var(--error)",
+                        "outline": "var(--outline)",
+                        "tertiary-fixed": "var(--tertiary-fixed)",
+                        "secondary-fixed-dim": "var(--secondary-fixed-dim)",
+                        "on-background": "var(--on-background)",
+                        "surface-dim": "var(--surface-dim)",
+                        "on-error": "var(--on-error)",
+                        "secondary-container": "var(--secondary-container)",
+                        "on-error-container": "var(--on-error-container)",
+                        "surface-container-highest": "var(--surface-container-highest)",
+                        "error-container": "var(--error-container)",
+                        "inverse-surface": "var(--inverse-surface)",
+                        "surface-tint": "var(--surface-tint)",
+                        "on-primary": "var(--on-primary)",
+                        "inverse-on-surface": "var(--inverse-on-surface)",
+                        "on-primary-fixed-variant": "var(--on-primary-fixed-variant)",
+                        "primary-dim": "var(--primary-dim)",
+                        "surface": "var(--surface)",
+                        "surface-variant": "var(--surface-variant)",
+                        "outline-variant": "var(--outline-variant)",
+                        "primary-container": "var(--primary-container)",
+                        "primary-fixed": "var(--primary-fixed)",
+                        "on-primary-fixed": "var(--on-primary-fixed)",
+                        "on-secondary-fixed": "var(--on-secondary-fixed)",
+                        "on-tertiary-container": "var(--on-tertiary-container)",
+                        "on-surface-variant": "var(--on-surface-variant)",
+                        "background": "var(--background)"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--on-background);
+            font-family: 'Manrope', sans-serif;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        .glass-panel {
+            background: rgba(26, 11, 54, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+
+<body class="selection:bg-primary selection:text-on-primary overflow-x-hidden">
+
+    <!-- Custom Cursor -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-line"></div>
+    <div id="cursor-robot">
+        <div class="robot-core"></div>
+        <div class="robot-ring"></div>
+    </div>
+
+    <!-- Header / TopAppBar -->
+    <header
+        class="docked full-width top-0 sticky z-50 backdrop-blur-lg border-b border-outline-variant/10 shadow-none bg-surface-container-low/40">
+        <div class="flex justify-between items-center w-full px-4 md:px-8 py-3 md:py-4 max-w-screen-2xl mx-auto">
+            <div class="flex items-center gap-3 md:gap-6">
+                <a href="index.html" class="flex shrink-0"><img src="logo_university1.png" alt="Amity University"
+                        class="h-10 md:h-16 lg:h-20 w-auto object-contain"></a>
+                <div class="h-8 md:h-12 lg:h-16 w-px bg-outline-variant/50"></div>
+                <a href="index.html" class="flex shrink-0"><img src="logo_prakalp2.png" alt="Prakalp"
+                        class="h-20 md:h-32 lg:h-20 w-auto object-contain"></a>
+                <div
+                    class="text-xl sm:text-2xl md:text-3xl font-bold tracking-tighter text-primary font-['Space_Grotesk'] leading-[1.1]">
+                    AMITECH<br class="block sm:hidden md:block lg:hidden xl:hidden"> PRAKALP EXPO
+                </div>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-12">
+                <a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-on-surface-variant hover:text-primary transition-all duration-300"
+                    href="index.html">Home</a>
+                <a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-on-surface-variant hover:text-primary transition-all duration-300"
+                    href="index.html#domains">Domain</a>
+                <a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-primary font-bold border-b-2 border-primary pb-1 transition-all duration-300"
+                    href="downloads.html">Downloads</a>
+                <a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-on-surface-variant hover:text-primary transition-all duration-300"
+                    href="index.html#contact">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-2 md:gap-4">
+                <button id="theme-toggle"
+                    class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface bg-surface-container hover:bg-surface-container-highest transition-colors shadow-sm active:scale-95 border border-outline-variant/20">
+                    <span class="material-symbols-outlined text-[1.25rem] toggle-icon">dark_mode</span>
+                </button>
+                <a href="https://forms.gle/UQfnDZQ6dpMkbsQ99" target="_blank"
+                    class="bg-primary text-on-primary px-4 md:px-6 py-2 rounded-md font-['Space_Grotesk'] font-bold text-xs md:text-sm uppercase tracking-widest scale-95 active:scale-90 transition-all duration-300 hover:bg-primary-dim shadow-[0_0_20px_rgba(163,166,255,0.3)] inline-block">
+                    Register
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Downloads Section -->
+        <section class="py-32 px-8 min-h-[70vh] flex flex-col justify-center items-center relative overflow-hidden">
+            <!-- Background Decorative Elements -->
+            <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none overflow-hidden -z-10">
+                <div
+                    class="absolute top-[-10%] left-[20%] w-[40%] h-[40%] bg-tertiary opacity-10 blur-[120px] rounded-full">
+                </div>
+                <div
+                    class="absolute bottom-[-10%] right-[10%] w-[30%] h-[30%] bg-secondary opacity-10 blur-[100px] rounded-full">
+                </div>
+            </div>
+
+            <div class="max-w-4xl w-full mx-auto space-y-16">
+                <div class="text-center space-y-6 reveal-on-scroll">
+                    <div
+                        class="inline-flex items-center justify-center space-x-2 px-3 py-1 rounded-full bg-surface-container-highest border border-outline-variant/20 mx-auto">
+                        <span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_#a3a6ff]"></span>
+                        <span class="text-xs font-['Space_Grotesk'] uppercase tracking-tighter text-primary">Resources &
+                            Downloads</span>
+                    </div>
+                    <h1 class="font-['Space_Grotesk'] text-5xl md:text-7xl font-bold tracking-tight text-on-surface">
+                        Event <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Resources</span>
+                    </h1>
+                    <p class="text-on-surface-variant max-w-2xl mx-auto text-lg md:text-xl">Download the official
+                        guidelines and templates necessary for your Amitech Prakalp Expo submission.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 reveal-on-scroll" style="transition-delay: 100ms;">
+                    <!-- Guidelines Card -->
+                    <div
+                        class="bg-surface-container-low border border-outline-variant/20 rounded-3xl p-8 hover:border-primary/50 transition-colors shadow-lg hover:shadow-xl hover:shadow-primary/5 flex flex-col items-center text-center space-y-6 group">
+                        <div
+                            class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-500">
+                            <span class="material-symbols-outlined text-4xl"
+                                style="font-variation-settings: 'FILL' 1;">picture_as_pdf</span>
+                        </div>
+                        <div>
+                            <h3 class="font-['Space_Grotesk'] text-2xl font-bold text-on-surface mb-2">Event Guidelines
+                            </h3>
+                            <p class="text-on-surface-variant text-sm mb-6">Comprehensive rules, judging criteria, and
+                                important dates for the expo.</p>
+                        </div>
+                        <a href="Prakalp_guidelines.pdf" download
+                            class="w-full bg-surface-container-highest hover:bg-primary hover:text-on-primary text-on-surface px-6 py-4 rounded-xl font-['Space_Grotesk'] font-bold text-sm uppercase tracking-widest transition-all flex items-center justify-center gap-2 border border-outline-variant/20 hover:border-transparent mt-auto group-hover:shadow-[0_0_20px_rgba(163,166,255,0.3)]">
+                            <span class="material-symbols-outlined text-[1.25rem]">download</span>
+                            Download PDF
+                        </a>
+                    </div>
+
+                    <!-- Poster Template Card -->
+                    <div
+                        class="bg-surface-container-low border border-outline-variant/20 rounded-3xl p-8 hover:border-secondary/50 transition-colors shadow-lg hover:shadow-xl hover:shadow-secondary/5 flex flex-col items-center text-center space-y-6 group">
+                        <div
+                            class="w-20 h-20 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary group-hover:scale-110 transition-transform duration-500">
+                            <span class="material-symbols-outlined text-4xl"
+                                style="font-variation-settings: 'FILL' 1;">slideshow</span>
+                        </div>
+                        <div>
+                            <h3 class="font-['Space_Grotesk'] text-2xl font-bold text-on-surface mb-2">Poster Template
+                            </h3>
+                            <p class="text-on-surface-variant text-sm mb-6">The official presentation poster template
+                                strictly to be followed by those participants who wish to present poster.</p>
+                        </div>
+                        <a href="Prakalp_template.pptx" download
+                            class="w-full bg-surface-container-highest hover:bg-secondary hover:text-on-primary text-on-surface px-6 py-4 rounded-xl font-['Space_Grotesk'] font-bold text-sm uppercase tracking-widest transition-all flex items-center justify-center gap-2 border border-outline-variant/20 hover:border-transparent mt-auto group-hover:shadow-[0_0_20px_rgba(255,180,171,0.3)]">
+                            <span class="material-symbols-outlined text-[1.25rem]">download</span>
+                            Download Template
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="full-width rounded-t-none bg-surface-container border-t border-outline-variant/20">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full space-y-8 md:space-y-0 max-w-screen-2xl mx-auto">
+            <div class="flex flex-col space-y-4 items-center md:items-start">
+                <div class="font-['Space_Grotesk'] font-bold text-2xl text-tertiary">AMITECH-PRAKALP</div>
+                <p
+                    class="text-on-surface-variant font-['Manrope'] text-sm leading-relaxed max-w-xs text-center md:text-left">
+                    The annual flagship project competition fostering technical brilliance at Amity University Mumbai.
+                </p>
+            </div>
+
+            <div class="flex gap-12">
+                <div class="space-y-4 text-center md:text-left">
+                    <h5 class="text-secondary font-['Space_Grotesk'] uppercase text-xs tracking-widest font-bold">
+                        Contact</h5>
+                    <ul class="space-y-2 text-sm text-on-surface-variant font-['Manrope'] inline-block text-left">
+                        <li>
+                            <a href="tel:+917828887985"
+                                class="flex items-center gap-2 hover:text-tertiary transition-colors">
+                                <span class="material-symbols-outlined text-sm">phone</span>
+                                7828887985
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+919619029115"
+                                class="flex items-center gap-2 hover:text-tertiary transition-colors">
+                                <span class="material-symbols-outlined text-sm">phone</span>
+                                9619029115
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col items-center md:items-end space-y-4">
+                    <div class="flex gap-4">
+                        <div
+                            class="w-12 h-12 bg-surface-container-highest rounded-lg flex items-center justify-center border border-outline-variant/10">
+                            <span class="material-symbols-outlined text-primary">school</span>
+                        </div>
+                        <div
+                            class="w-12 h-12 bg-surface-container-highest rounded-lg flex items-center justify-center border border-outline-variant/10">
+                            <span class="material-symbols-outlined text-tertiary">emoji_events</span>
+                        </div>
+                    </div>
+                    <div class="text-on-surface-variant text-xs font-['Manrope']">© 2026 AMITECH-PRAKALP | Amity
+                        University
+                        Mumbai</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
